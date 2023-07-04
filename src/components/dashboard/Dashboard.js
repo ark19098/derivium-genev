@@ -11,6 +11,7 @@ const Dashboard = () => {
                 <Outlet />
             </main>
         </Wrapper>
+        
     );
 }
 

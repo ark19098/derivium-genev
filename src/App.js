@@ -4,6 +4,7 @@ import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import Dashboard from "./components/dashboard/Dashboard";
 import CPFMtable from "./components/dashboard/CPFMtable";
+import DetailTable from "./components/dashboard/DetailTable";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
         element: <Dashboard />,
         children: [
           { index: true, element: <CPFMtable /> },
+          { path: 'detail', element: <DetailTable /> },
         ],
       },
     ]
@@ -41,7 +43,8 @@ const theme = {
     primary: '#1C79BB',
     secondary: '#F2FAFF',
     accent: '#056CB4',
-    accent1: '#FF0000',
+    accent1: '#9ccff5',
+    accent2: '#FF0000',
   },
   media: {
     mobile: '768px',

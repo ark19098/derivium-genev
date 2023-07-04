@@ -16,7 +16,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${({theme}) => theme.colors.bg};
+    ${'' /* background: ${({theme}) => theme.colors.bg}; */}
+    background: white;
+  }
+  p {
+    font-size: 1.65rem;
   }
   a {
     text-decoration: none;
