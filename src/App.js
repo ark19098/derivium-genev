@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Root from "./components/Root";
+import { GlobalStyle } from "./GlobalStyle";
+import { ThemeProvider } from "styled-components";
+import Dashboard from "./components/dashboard/Dashboard";
+import CPFMtable from "./components/dashboard/CPFMtable";
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    children: [
+      { 
+        path: 'dashboard',
+        // index: true,
+        element: <Dashboard />,
+        children: [
+          { index: true, element: <CPFMtable /> },
+        ],
+      },
+    ]
+  },
+  ,
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 
 export default App;
+
+const theme = {
+  colors: {
+    text: '#0000',
+    bg: '#F2FAFF',
+    primary: '#1C79BB',
+    secondary: '#F2FAFF',
+    accent: '#056CB4',
+    accent1: '#FF0000',
+  },
+  media: {
+    mobile: '768px',
+    tab: '998px',
+  }
+}
