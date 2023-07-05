@@ -9,9 +9,11 @@ export const PublishButton = styled.div`
     margin: auto;
     cursor: pointer;
     &:hover {
-        transform: translateY(2px)
+        transform: translateY(-2px);
+        box-shadow: 5px 5px 5px #ccc;
     }
     &:active {
-        transform: translateY(3px)
+        transform: translateY(0);
+        box-shadow: 3px 3px 3px #ccc;
     }
 `;

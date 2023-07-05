@@ -90,7 +90,6 @@ const DetailTable = () => {
 export default DetailTable;
 
 const Wrapper = styled.div`
-    margin-left: 1rem;
     width: 95%;
     margin: auto;
     p {
@@ -102,11 +101,10 @@ const Wrapper = styled.div`
     .ant-table-thead .ant-table-cell {
         background-color:  ${({theme}) => theme.colors.primary};
         color: white;
-        border-radius: 0 !important; 
+        border-radius: 0 !important;
     }
     .card {
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     }
 `;
 
