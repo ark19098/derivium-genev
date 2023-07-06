@@ -21,7 +21,7 @@ const Wrapper = styled.section`
     display: flex;
     height: calc(100vh - 5rem);
     main {
-        flex: 4;
+        flex: 5;
         background-color: inherit;
     }
 `;

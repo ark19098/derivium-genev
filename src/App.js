@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import Dashboard from "./components/dashboard/Dashboard";
 import CPFMtable from "./components/dashboard/CPFMtable";
 import DetailTable from "./components/dashboard/DetailTable";
+import TablesTab from "./components/dashboard/TablesTab";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
         element: <Dashboard />,
         children: [
           { index: true, element: <CPFMtable /> },
-          { path: 'detail', element: <DetailTable /> },
+          // { path: 'detail', element: <DetailTable /> },
+          { path: 'detail', element: <TablesTab /> },
         ],
       },
     ]

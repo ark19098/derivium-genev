@@ -62,7 +62,7 @@ const DetailTable = () => {
 
     return (
         <Wrapper>
-            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '20px',}}>
+            {/* <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '20px',}}>
                 <p>Select Category:</p>
                 <Select
                     defaultValue="POS"
@@ -70,7 +70,7 @@ const DetailTable = () => {
                     onChange={handleChange}
                     options={options}
                 />
-            </div>
+            </div> */}
             <div className='card'>
                 <Table 
                 dataSource={dataSource}
@@ -78,7 +78,7 @@ const DetailTable = () => {
                 size='medium'
                 columns={columns} 
                 style={{
-                    marginTop: '20px',
+                    marginTop: '10px',
                     padding: 0,
                 }}
                 />
@@ -90,8 +90,8 @@ const DetailTable = () => {
 export default DetailTable;
 
 const Wrapper = styled.div`
-    width: 95%;
-    margin: auto;
+    ${'' /* width: 95%;
+    margin: auto; */}
     p {
         color: ${({theme}) => theme.colors.primary};
     }

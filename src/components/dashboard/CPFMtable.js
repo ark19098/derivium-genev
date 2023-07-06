@@ -176,7 +176,7 @@ const CPFMtable = () => {
 export default CPFMtable;
 
 const Wrapper = styled.div`
-    margin-top: 1rem;
+    margin-top: 2rem;
     ${'' /* color: ${({theme}) => theme.colors.accent}; */}
     table {
         width: 95%;
@@ -197,7 +197,7 @@ const Wrapper = styled.div`
         color: #000;
         border: 1px solid #F0F0F0;
         border-left: 1.5px solid #F0F0F0;
-        padding: 2rem 3rem;
+        padding: 1.5rem 2.5rem;
     }
     th {
         padding: 1.5rem 2.5rem;
